@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laços de Repetição - LOOPS</title>
+</head>
+
+<body>
+
+    <h1>Escolha um item</h1>
+    <ul>
+        <li>1-Suco</li>
+        <li>2-Agua Gelada</li>
+        <li>3-Sorvete</li>
+        <li>4-Chamar o garçom</li>
+    </ul>
+
+    <button onclick="pedir()">Pedir</button>
+
+
+
+    <script src="script.js"> </script>
+
+
+
+<script type="text/javascript" id="dcoder_script">// laço while = enquanto
+
+var x = 0;
+document.write('<br><h3>Testando com o while</h3>');
+while (x <= 10) {
+    document.write('<br>O valor de x é: ' + x);
+    x = x + 1;
+}
+
+//laço for = para
+
+var controle = 10
+document.write('<br><h3>Testando loop com FOR</h3>');
+for (a = 0; a <= controle; a++) {
+    document.write('<br>O valor de a é: ' + a);
+}
+
+// laço Switch = escolha
+// criaer a função pedir
+
+function pedir() {
+    // alert("A casa caiu mano!!!")
+    var valor = prompt("Digite uma opção de 1 a 4");
+    // console.log(valor);
+    // console.log(typeof('valor'));
+    // console.log(Number('valor'));
+    // console.log(typeof(Number('valor')));
+
+    switch (Number(valor)) {
+        case 1:
+            alert("Você escolheu suco");
+            break;
+        case 2:
+            alert("Você escolheu água gelada");
+            break;
+        case 3:
+            alert("Você escolheu sorvete");
+            break;
+        case 4:
+            alert("Você escolheu chamar o garçon");
+            break;
+        default:
+            alert("Digite entre 1 e 4");
+            break
+
+    }
+}</script></body></html>

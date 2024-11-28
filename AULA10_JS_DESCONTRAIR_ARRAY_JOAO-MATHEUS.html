@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+ <head></head> 
+ <body> 
+  &lt;<script type="text/javascript" id="dcoder_script">let pessoa = {
+  nome: 'Joao',
+  sobrenome: 'Matheus',
+  empresa: 'CESF',
+  cargo: 'Aluno'
+};
+
+console.log(pessoa);
+console.log(pessoa.nome);
+
+// desconstruir o objeto
+const { nome, cargo, empresa } = pessoa;
+console.log(nome);
+console.log(empresa);
+
+let nomes = ['Aparício','Bernadete','Cremilda'];
+console.log(nomes);
+let {0:primeiroNome,1:segundoNome,2: terceiroNome}=nomes;
+
+  //outro jeito de desconstruir o array
+  let [primNome,segNome,tercNome]=nomes;
+  console.log(segNome)</script></body></html>

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="pt-br"> 
+ <head> 
+  <meta charset="UTF-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Objetos</title> 
+ </head> 
+ <body> 
+  <script src="script.js"></script> 
+ 
+<script type="text/javascript" id="dcoder_script">// criando uma variável do tipo objeto
+let pessoa = {
+    Nome: "Deivid",  // 'Nome' está com a letra maiúscula
+    idade: 52,
+    altura: 1.58,
+    cargo: "estudante",
+};
+
+console.log(pessoa);
+console.log(pessoa.Nome);  // Acessar 'Nome' com letra maiúscula
+console.log(pessoa.altura);
+
+// criando um objeto carro
+let carro = {
+    nome: 'Brasília',
+    cor: 'amarela',
+    marca: 'Volkswagen'  // Corrigido "Volksvagem" para "Volkswagen"
+};
+
+console.log(carro.nome + " " + carro.cor);
+
+// criando array de objetos
+let alunos = [
+    {nome: "Lilia Cauderu", CGM: 450162324, turma: "2DS"},
+    {nome: "Agatha Harkness", CGM: 350172324, turma: "2DS"},
+    {nome: "Billy Maximoff", CGM: 21202156, turma: "2DS"}
+];
+
+console.log(alunos);
+console.log(alunos[2]); 
+console.log(alunos[0].nome)</script></body></html>

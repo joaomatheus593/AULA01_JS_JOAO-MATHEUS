@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usando funções no JavaScript</title>
+</head>
+
+<body>
+    <h2 id="area">Bem Vindo!!!</h2>
+
+    <button onclick="entrar()">Acessar</button>
+
+    <script src="script.js"></script>
+
+<script type="text/javascript" id="dcoder_script">var area = document.getElementById("area");
+function entrar() {
+    // alert("Clicou");
+    var nome = prompt("Digite seu nome");
+    // console.log(nome);
+    area.innerHTML = "Bem Vindo " + nome + " ";
+
+    // criando um botao dentro do HTML a partir do JS
+    let botaoSair = document.createElement('button');
+
+    botaoSair.innerHTML = "sair da conta";
+    botaoSair.onclick = sair;
+
+    area.appendChild(botaoSair);
+
+}
+
+function sair() {
+    alert("até mais!!!");
+    area.innerHTML = 'você saiu';
+}</script></body></html>

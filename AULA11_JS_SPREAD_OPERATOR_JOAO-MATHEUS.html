@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pt-BR"> 
+ <head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Console Output Example</title> 
+ </head> 
+ <body> 
+  <script src="script.js"></script> 
+ 
+<script type="text/javascript" id="dcoder_script">// Exemplo de Array
+let arr1 = [4, 5, 6];
+let arr2 = [1, 2, 3, ...arr1];
+console.log(arr1); // Exibe o array original
+console.log(arr2); // Exibe o array combinado
+
+// Exemplo de Objeto "Joao"
+const pessoa1 = {
+    nome: 'Joao',
+    idade: 15,
+    cargo: 'Aluno',
+    status: 'Ativo',
+    cidade: 'Campo Largo'
+};
+console.log(JSON.stringify(pessoa1, null, 2)); // Exibe o objeto formatado
+console.log(pessoa1.cargo); // Exibe apenas o cargo
+
+// Exemplo de Objeto "Cleiton"
+const pessoa2 = {
+    nome: 'Cleiton',
+    sobrenome: 'Pereira',
+    cargo: 'Estagiário',
+    status: 'Ativo',
+    inicio: '17/02/2000'
+};
+console.log(JSON.stringify(pessoa2, null, 2)); // Exibe o objeto formatado</script></body></html>

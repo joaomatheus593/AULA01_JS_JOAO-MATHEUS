@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en"> 
+ <head> 
+  <meta charset="UTF-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Calculadora de IMC</title> 
+  <link rel="stylesheet" href="style.css"> 
+ <style type="text/css" id="dcoder_stylesheet">body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+form {
+    background: green;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 300px; /* Largura fixa para o formulário */
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: yellow;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: #5cb85c;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%; /* Largura total para o botão */
+}
+
+input[type="submit"]:hover {
+    background-color: #4cae4c;
+}
+
+#resultado {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #333;
+    text-align: center; /* Centraliza o texto da resposta */
+}</style></head> 
+ <body> 
+  <h1>Calculadora de IMC</h1> 
+  <form id="imcForm"> <label>Informe seu Peso</label> 
+   <input type="text" name="peso" id="peso" placeholder="Exemplo 65.7">
+   <br>
+   <br> <label>Informe a sua Altura</label> 
+   <input type="text" name="altura" id="altura" placeholder="Exemplo 1.90">
+   <br>
+   <br> 
+   <input type="submit" value="Calcular IMC"> 
+  </form> 
+  <div id="resultado"></div> 
+  <script src="index.js"></script> 
+  <script>
+        document.getElementById('imcForm').addEventListener('submit', calcularIMC);
+
+        function calcularIMC(event) {
+            event.preventDefault();
+
+            const peso = parseFloat(document.getElementById('peso').value);
+            const altura = parseFloat(document.getElementById('altura').value);
+
+            // Validação de entrada
+            if (isNaN(peso) || isNaN(altura) || altura <= 0) {
+                alert('Por favor, insira valores válidos para peso e altura.');
+                return;
+            }
+
+            // Cálculo do IMC
+            const imc = peso / (altura * altura);
+            let classificacao = '';
+
+            // Classificação do IMC
+            if (imc < 18.5) {
+                classificacao = 'Abaixo do peso';
+            } else if (imc < 24.9) {
+                classificacao = 'Peso normal';
+            } else if (imc < 29.9) {
+                classificacao = 'Sobrepeso';
+            } else {
+                classificacao = 'Obesidade';
+            }
+
+            // Exibição do resultado
+            document.getElementById('resultado').innerText = `Seu IMC é: ${imc.toFixed(2)} (${classificacao})`;
+        }
+    </script> 
+ 
+<script type="text/javascript" id="dcoder_script">var peso;
+var altura;
+var imc;
+var resultado;
+
+document.getElementById('imcForm').addEventListener('submit', calcular);
+
+function calcular(event) {
+    event.preventDefault();
+
+    peso = parseFloat(document.getElementById('peso').value);
+    altura = parseFloat(document.getElementById('altura').value);
+
+    // Validação de entrada
+    if (isNaN(peso) || isNaN(altura) || altura <= 0) {
+        alert('Por favor, insira valores válidos para peso e altura.');
+        return;
+    }
+
+    // Cálculo do IMC
+    imc = peso / (altura * altura);
+    let classificacao = '';
+
+    // Classificação do IMC
+    if (imc < 18.5) {
+        classificacao = 'Abaixo do peso';
+    } else if (imc < 24.9) {
+        classificacao = 'Peso normal';
+    } else if (imc < 29.9) {
+        classificacao = 'Sobrepeso';
+    } else {
+        classificacao = 'Obesidade';
+    }
+
+    // Exibição do resultado
+    resultado = `Seu IMC é: ${imc.toFixed(2)} (${classificacao})`;
+    console.log(resultado);
+    document.getElementById('resultado').innerText = resultado;
+}</script></body></html>

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="pt-br"> 
+ <head> 
+  <meta charset="UTF-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Diferenças entre Var,Let e Const</title> 
+ </head> 
+ <body> 
+  <script src="script.js">
+
+
+    </script> 
+ 
+<script type="text/javascript" id="dcoder_script">// var
+var nome = 'Alastor';
+console.log(nome);
+
+if (nome === 'Alastor') {
+    var escola = "CESF";
+    console.log(escola);
+}
+
+console.log(escola); // A variável 'escola' com var é acessível fora do bloco.
+
+escola = "Sagrada";
+console.log(escola);
+
+// let
+if (nome === 'Alastor') {
+    let curso = 'DS';
+    console.log(curso); // Let é acessível apenas dentro deste bloco.
+}
+
+// const
+const cargo = 'estudante';
+console.log(cargo);
+
+// Atribuição de novo valor a uma const causaria um erro, então removi a linha abaixo:
+// cargo = "programador"; // Isso causaria um erro, pois não se pode alterar uma const.
+
+// Variáveis sem atribuição inicial
+
+var aluno1;
+aluno1 = "Ana Clara";
+console.log(aluno1); // Pode ser declarada sem atribuição inicial com var
+
+let aluno2;
+aluno2 = "Bernardo";
+console.log(aluno2); // Pode ser declarada sem atribuição inicial com let
+
+// Const precisa de uma atribuição no momento da declaração
+const aluno3 = 'Clodersoswalderswon';
+console.log(aluno3);</script></body></html>
